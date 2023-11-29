@@ -3,7 +3,7 @@ import random
 def rule_based_chatbot(user_input):
     user_input = user_input.lower()
 
-    # Define rules and responses
+    # rules and responses
     rules = {
         'greeting': ['Hello! How can I assist you today?', 'Hi there!', 'Hey!'],
         'farewell': ['Goodbye! Have a great day.', 'See you later!', 'Farewell!'],
@@ -17,7 +17,7 @@ def rule_based_chatbot(user_input):
         'name': ['You can call me Alice!', 'I don\'t have a personal name, but you can call me whatever you like.'],
     }
 
-    # Check user input against rules
+    # user input against rules
     if any(keyword in user_input for keyword in ['hello', 'hi', 'hey']):
         return random.choice(rules['greeting'])
     elif any(keyword in user_input for keyword in ['bye', 'goodbye']):
@@ -41,7 +41,7 @@ def rule_based_chatbot(user_input):
     else:
         return "I'm sorry, I don't understand. Can you please rephrase or ask something else?"
 
-# Example usage
+# Example
 while True:
     user_input = input("You: ")
     if user_input.lower() in ['exit', 'quit', 'bye']:
